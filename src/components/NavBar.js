@@ -1,11 +1,17 @@
 import React from 'react';
 import reactlogo from '../imges/reactlogo.png';
-const NavBar =()=>{return(
+const NavBar =({mode,modeChanger})=>{return(
     <header>
-        <nav className="navbar">
+        <nav className={mode ? "navbar navbarLight":"navbar"}>
             <img src={reactlogo} alt="react logo" />
             <h2 className="logoName">ReactFacts</h2>
-            <h3 className="side">React Course - Project 1</h3>
+            <div className="side">
+                <h3>light</h3>
+                <div className="slideBox">
+                    <input className="slide" onChange={modeChanger} type="checkbox" checked={mode}/>
+                </div>
+                <h3 className="secondary">dark</h3>
+            </div>
         </nav>
     </header>
 )};

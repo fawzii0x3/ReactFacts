@@ -1,7 +1,7 @@
 import React from 'react';
 import largeIcon from '../imges/react-icon-large.png'
-const Main =()=>{return(
-<main>
+const Main =({mode})=>{return(
+<main className={mode ? "mainLight":""} >
     <h1 className="main-title">Fun facts about React</h1>
     <ul className="main-dis">
         <li>Was first released in 2013</li>
